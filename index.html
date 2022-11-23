@@ -34,6 +34,8 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css"
           rel="stylesheet">
+
+    <link rel="stylesheet" href="vuejs/main.css">
 </head>
 
 <body>
@@ -206,12 +208,15 @@
                             style="width: 350px; margin-left: -205px;">25 Years Experience</h2>
                         <h6 class="text-uppercase">{{employeeIntro}}</h6>
                         <h1 class="mb-4">We Provide Reliable And Effective Information Services</h1>
-                        <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                            ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum
-                            est
-                            dolor</p>
-                        <a href=""
-                           class="btn btn-primary mt-2">Learn More</a>
+                        <div class="employees">
+                            <div class="employee"
+                                 v-for="employee in employees">
+                                <img :src="`https://edwardtanguay.vercel.app/share/images/employees/employee_${employee.employeeID}.jpg`"/>
+                                <div class="name">
+                                    {{employee.firstName}} {{employee.lastName}}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
