@@ -11,4 +11,10 @@
 
 .employee img {
 	height: 5rem;
+	cursor: pointer;
+}
+
+.employee .name .title {
+	color: #999;
+	font-style: italic;
 }
